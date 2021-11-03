@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>술의민족 | Sulmin </title>
+
+</head>
+
+<style>
+    .join {
+        float: right;
+    }
+
+    .wrap {
+        width: 1000px;
+        margin: auto;
+    }
+
+    .card {
+        float: left;
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+    }
+
+    {#.card-img-top {#}
+    {#    width: 500px;#}
+    {#    height: 600px;#}
+    {#}#}
+
+
+</style>
+
+
+<body>
+<div class="wrap">
+    <div class="join">
+        <button type="button" class="btn btn-link">로그인</button>
+        <button type="button" class="btn btn-link">회원가입</button>
+    </div>
+
+    <pre>
+
+        </pre>
+
+    <img class="sul_logo"
+         src="https://a.cdn-hotels.com/gdcs/production40/d811/5e89ad90-8f10-11e8-b6b0-0242ac110007.jpg" width=1000,
+         height=200
+         alt="Card image cap">
+
+    <pre>
+
+        </pre>
+
+    <div classs="drink">
+        <div class="beer">
+            <hr>
+            <h2> 맥주 </h2>
+            {%  for alcohol in alcohols %}
+            {%  if alcohol.cat == '맥주' %}
+            <div class="card">
+                <img class="card-img-top"
+                     src="https://a.cdn-hotels.com/gdcs/production40/d811/5e89ad90-8f10-11e8-b6b0-0242ac110007.jpg"
+                     width=300, height=200
+                     alt="Card image cap">
+                <div class="card-body">
+                    <a href="http://naver.com/" class="sul_name"> {{ alcohol.name }} - {{alcohol.reviews}} </a>
+{#                    <p> {{ alcohol.desc }} </p>#}
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+<img src = "이미지 경로"  style=" display:block;">
+        <div class="wine">
+            <h2> 와인 </h2>
+            {%  for alcohol in alcohols %}
+            {%  if alcohol.cat == '와인' %}
+            <div class="card">
+                <img class="card-img-top"
+                     src="https://a.cdn-hotels.com/gdcs/production40/d811/5e89ad90-8f10-11e8-b6b0-0242ac110007.jpg"
+                     width=300, height=200
+                     alt="Card image cap">
+                <div class="card-body">
+                    <a href="http://naver.com/" class="sul_name"> {{ alcohol.name }} - {{alcohol.reviews}} </a>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
+{#        <div class="j_sul">#}
+{##}
+{#            <h2> 사케 </h2>#}
+{#            {% for row in rows %}#}
+{#            <div class="card">#}
+{#                <img class="card-img-top"#}
+{#                     src="https://a.cdn-hotels.com/gdcs/production40/d811/5e89ad90-8f10-11e8-b6b0-0242ac110007.jpg"#}
+{#                     width=300, height=200#}
+{#                     alt="Card image cap">#}
+{#                <div class="card-body">#}
+{#                    <a href="http://naver.com/" class="sul_name"> 술이름 </a>#}
+{#                </div>#}
+{#            </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{##}
+{#        <div class="y_sul">#}
+{##}
+{#            <h2> 양주 </h2>#}
+{#            {% for row in rows %}#}
+{#            <div class="card">#}
+{#                <img class="card-img-top"#}
+{#                     src="https://a.cdn-hotels.com/gdcs/production40/d811/5e89ad90-8f10-11e8-b6b0-0242ac110007.jpg"#}
+{#                     width=300, height=200#}
+{#                     alt="Card image cap">#}
+{#                <div class="card-body">#}
+{#                    <a href="http://naver.com/" class="sul_name"> 술이름 </a>#}
+{#                </div>#}
+{#            </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+    </div>
+</div>
+</body>
+</html>
